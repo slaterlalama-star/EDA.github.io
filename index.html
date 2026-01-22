@@ -21,6 +21,17 @@
         <button onclick="irASeccion('signos')">Signos de Alerta</button>
         <button onclick="irASeccion('ayuda')">¿Dónde Buscar Ayuda?</button>
         <button onclick="irASeccion('videos-testimoniales')">Perspectivas sobre TCA: Voces del Colegio</button>
+        <script>
+  // Función para abrir el formulario en nueva pestaña
+  function abrirFormulario() {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdrU2O4-2SQo863a3vOn-aO76HTZNxp6DVbdrczXVJSrC26BA/viewform?usp=publish-editor', '_blank');
+  }
+
+  // Tu función existente irASección (dejala tal cual)
+  function irASección(idSección) {
+    document.getElementById(idSección).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
     </nav>
 
     <!-- SECCIÓN PRINCIPAL: ¿QUÉ SON LOS T.C.A.? -->
