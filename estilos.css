@@ -122,3 +122,7 @@ section#ayuda a:hover {
     text-align: center; /* Centra el enlace de la infografía */
     font-size: 14px; /* Tamaño de texto más pequeño */
 }
+iframe {
+  max-width: 100%;
+  height: auto;
+}
