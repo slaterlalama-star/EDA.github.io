@@ -100,3 +100,10 @@ section ul {
 section li {
     margin-bottom: 0.8rem;
 }
+/* ESTILOS PARA SUBTÍTULOS h3 */
+section h3 {
+    color: #2980b9;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
