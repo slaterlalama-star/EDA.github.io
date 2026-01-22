@@ -157,3 +157,44 @@ botón[al hacer clic="abrirFormulario()"]:hover {
 .botón-formulario:hover {
   background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
 }
+/* Estilos para el logo del colegio junto al título */
+.contenedor-titulo-logo {
+  display: flex;
+  align-items: center; /* Alineación vertical perfecta */
+  gap: 30px; /* Más espacio entre logo y texto (antes era 15px) */
+  padding: 10px 20px; /* Más margen lateral y superior/inferior */
+  justify-content: flex-start; /* Asegura que todo quede al inicio del contenedor */
+}
+
+.logo-colegio {
+  width: 90px; /* Un poco más grande para que se note, pero proporcional */
+  height: auto; /* Mantiene proporciones */
+  object-fit: contain; /* Sin deformaciones */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+  .contenedor-titulo-logo {
+    gap: 15px; /* Menos espacio en celulares */
+    padding: 10px;
+  }
+  .logo-colegio {
+    width: 60px; /* Tamaño adecuado para pantallas chicas */
+  }
+}
+
+/* Ajuste adicional para el título y subtítulo */
+.texto-titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Espacio entre título y subtítulo */
+}
+
+h1 {
+  margin: 0; /* Quita margenes extra que puedan acercar el texto al logo */
+}
+
+.subtitulo {
+  margin: 0; /* Quita margenes extra */
+  text-align: left; /* Alinea el subtítulo con el título */
+}
