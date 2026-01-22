@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trastornos de Conducta Alimentaria | EDA</title>
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- HEADER: TÍTULO Y SUBTÍTULO -->
+    <header>
+        <h1>Trastornos de Conducta Alimentaria</h1>
+        <p class="subtitulo">E.D.A. Espacio de Diálogo Alimentario</p>
+    </header>
 
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="barra-navegacion">
+        <button onclick="irASeccion('tipos')">Tipos Comunes de TCA</button>
+        <button onclick="irASeccion('causas')">CAUSAS Y FACTORES DE RIESGO</button>
+        <button onclick="irASeccion('signos')">Signos de Alerta</button>
+        <button onclick="irASeccion('ayuda')">¿Dónde Buscar Ayuda?</button>
+        <button onclick="irASeccion('infografias')">Infografías</button>
+    </nav>
+
+    <!-- SECCIÓN PRINCIPAL: ¿QUÉ SON LOS T.C.A.? -->
+    <section id="que_son">
+        <h2>¿Qué son los T.C.A.?</h2>
+        <p>SON AFECCIONES COMPLEJAS QUE AFECTAN LA RELACIÓN CON LA COMIDA, EL PESO Y LA IMAGEN CORPORAL. SE ORIGINAN POR UNA COMBINACIÓN DE FACTORES BIOLÓGICOS, PSICOLÓGICOS Y SOCIALES. PUEDEN TENER CONSECUENCIAS GRAVES PARA LA SALUD.</p>
+        <img src="imagenes/que_son_tca.jpg" alt="Ilustración sobre Trastornos de Conducta Alimentaria">
+    </section>
+
+    <!-- SECCIONES VACIAS PARA COMPLETAR DESPUÉS -->
+    <section id="tipos">
+        <h2>Tipos Comunes de TCA</h2>
+        <!-- Aquí agregaremos contenido y multimedia después -->
+    </section>
+
+    <section id="causas">
+        <h2>CAUSAS Y FACTORES DE RIESGO</h2>
+        <!-- Aquí agregaremos contenido y multimedia después -->
+    </section>
+
+    <section id="signos">
+        <h2>Signos de Alerta</h2>
+        <!-- Aquí agregaremos contenido y multimedia después -->
+    </section>
+
+    <section id="ayuda">
+        <h2>¿Dónde Buscar Ayuda?</h2>
+        <!-- Aquí agregaremos contenido y multimedia después -->
+    </section>
+
+    <section id="infografias">
+        <h2>Infografías</h2>
+        <!-- Aquí agregaremos contenido y multimedia después -->
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 | E.D.A. Espacio de Diálogo Alimentario</p>
+    </footer>
+
+    <!-- SCRIPT PARA LA NAVEGACIÓN -->
+    <script>
+        // Función para ir a cada sección al hacer clic en los botones
+        function irASeccion(idSeccion) {
+            document.getElementById(idSeccion).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
