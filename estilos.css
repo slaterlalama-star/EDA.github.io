@@ -107,3 +107,18 @@ section h3 {
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
 }
+/* Estilo para enlaces de ayuda */
+section#ayuda a {
+    color: #27ae60; /* Color verde para transmitir esperanza */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+section#ayuda a:hover {
+    text-decoration: underline; /* Pone subrayado al pasar el mouse */
+    color: #2ecc71; /* Verde más claro al hacer hover */
+}
+
+.pie-imagen {
+    text-align: center; /* Centra el enlace de la infografía */
+    font-size: 14px; /* Tamaño de texto más pequeño */
+}
