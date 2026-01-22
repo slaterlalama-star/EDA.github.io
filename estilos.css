@@ -90,3 +90,13 @@ footer {
     padding: 1.5rem;
     margin-top: 3rem;
 }
+/* ESTILOS PARA LISTAS */
+section ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+section li {
+    margin-bottom: 0.8rem;
+}
