@@ -21,23 +21,18 @@
         <button onclick="irASeccion('signos')">Signos de Alerta</button>
         <button onclick="irASeccion('ayuda')">¿Dónde Buscar Ayuda?</button>
         <button onclick="irASeccion('videos-testimoniales')">Perspectivas sobre TCA: Voces del Colegio</button>
-         <botón al hacer clic="abrirFormulario()">Evalúa tu Bienestar</botón>
-</navegación>
+        <button onclick="abrirFormulario()" class="botón-formulario">Evalúa tu Bienestar</button>
+</nav>
 
-<!-- EL SCRIPT VA FUERA DE <navegación>, por ejemplo aquí debajo -->
 <script>
-  // Función para abrir el formulario en nueva pestaña
-  function abrirFormulario() {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdrU2O4-2SQo863a3vOn-aO76HTZNxp6DVbdrczXVJSrC26BA/viewform?usp=publish-editor', '_blank');
-  }
+function abrirFormulario() {
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLSdrU2O4-2SQo863a3vOn-aO76HTZNxp6DVbdrczXVJSrC26BA/viewform?usp=publish-editor', '_blank');
+}
 
-  // Función existente corregida
-  function irASección(idSección) {
-    document.getElementById(idSección).scrollIntoView({ behavior: 'smooth' });
-  }
+function irASección(idSección) {
+  document.getElementById(idSección).scrollIntoView({ behavior: 'smooth' });
+}
 </script>
-    </nav>
-
     <!-- SECCIÓN PRINCIPAL: ¿QUÉ SON LOS T.C.A.? -->
     <section id="que_son">
         <h2>¿Qué son los T.C.A.?</h2>
