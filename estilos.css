@@ -157,44 +157,44 @@ botón[al hacer clic="abrirFormulario()"]:hover {
 .botón-formulario:hover {
   background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
 }
-/* Estilos para el logo del colegio junto al título */
+/* Estilos para el logo del colegio - TAMAÑO PEQUEÑO Y AL LADO DEL TÍTULO */
 .contenedor-titulo-logo {
-  display: flex;
+  display: flex; /* Coloca logo y texto en fila */
   align-items: center; /* Alineación vertical perfecta */
-  gap: 30px; /* Más espacio entre logo y texto (antes era 15px) */
-  padding: 10px 20px; /* Más margen lateral y superior/inferior */
-  justify-content: flex-start; /* Asegura que todo quede al inicio del contenedor */
+  gap: 20px; /* Espacio moderado entre logo y título */
+  padding: 10px 20px; /* Margen lateral y vertical */
+  justify-content: flex-start; /* Todo al inicio del contenedor */
 }
 
 .logo-colegio {
-  width: 90px; /* Un poco más grande para que se note, pero proporcional */
-  height: auto; /* Mantiene proporciones */
-  object-fit: contain; /* Sin deformaciones */
+  width: 60px; /* Tamaño pequeño y proporcional */
+  height: 60px; /* Mismo ancho y alto para mantenerlo redondo */
+  object-fit: contain; /* Evita deformaciones */
+  background-color: white; /* Fondo blanco para que no se mezcle con la barra azul */
+  border-radius: 50%; /* Asegura forma redonda perfecta */
+  padding: 3px; /* Pequeño borde blanco alrededor */
 }
 
-/* Ajuste para pantallas pequeñas */
+/* Ajuste para pantallas pequeñas (celulares) */
 @media (max-width: 600px) {
+  .logo-colegio {
+    width: 45px; /* Más pequeño en celulares */
+    height: 45px;
+  }
   .contenedor-titulo-logo {
-    gap: 15px; /* Menos espacio en celulares */
+    gap: 15px; /* Menos espacio en pantallas chicas */
     padding: 10px;
   }
-  .logo-colegio {
-    width: 60px; /* Tamaño adecuado para pantallas chicas */
-  }
 }
 
-/* Ajuste adicional para el título y subtítulo */
+/* Estilos para el título y subtítulo */
 .texto-titulo {
   display: flex;
   flex-direction: column;
   gap: 5px; /* Espacio entre título y subtítulo */
 }
 
-h1 {
-  margin: 0; /* Quita margenes extra que puedan acercar el texto al logo */
-}
-
-.subtitulo {
-  margin: 0; /* Quita margenes extra */
-  text-align: left; /* Alinea el subtítulo con el título */
+h1, .subtitulo {
+  margin: 0; /* Quita márgenes sobrantes */
+  text-align: left; /* Alinea el texto a la izquierda */
 }
