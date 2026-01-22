@@ -142,3 +142,18 @@ botón[al hacer clic="abrirFormulario()"] {
 botón[al hacer clic="abrirFormulario()"]:hover {
   background-color: #cc0000; /* Rojo más oscuro para resaltar */
 }
+/* Estilo para el botón de evaluación de bienestar */
+.botón-formulario {
+  background-color: #ff0000; /* Rojo */
+  color: #000000; /* Letras negras */
+  font-weight: bold; /* Negrita */
+  padding: 8px 16px; /* Espacio interno */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Manito al pasar el mouse */
+  margin-left: 10px; /* Espacio con el botón anterior */
+}
+
+.botón-formulario:hover {
+  background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
+}
