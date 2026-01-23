@@ -157,18 +157,18 @@ botón[al hacer clic="abrirFormulario()"]:hover {
 .botón-formulario:hover {
   background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
 }
-/* Estilos para el logo del colegio - FINAL Y DEFINITIVO */
+/* Estilos para el logo del colegio - TAMAÑO AJUSTADO Y VISIBLE */
 .contenedor-titulo-logo {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra TODO el grupo */
-  gap: 15px; /* Espacio ENTRE logo y título */
+  justify-content: center; 
+  gap: 15px; /* Mismo espacio entre logo y título */
   padding: 10px 20px;
 }
 
 .logo-colegio {
-  width: 60px;
-  height: 60px;
+  width: 80px; /* Más grande para que se aprecie bien */
+  height: 80px; 
   object-fit: contain;
   background-color: white;
   border-radius: 50%;
@@ -178,8 +178,8 @@ botón[al hacer clic="abrirFormulario()"]:hover {
 /* Ajuste para celulares */
 @media (max-width: 600px) {
   .logo-colegio {
-    width: 45px;
-    height: 45px;
+    width: 60px; /* Aún visible en celulares */
+    height: 60px;
   }
   .contenedor-titulo-logo {
     gap: 10px;
