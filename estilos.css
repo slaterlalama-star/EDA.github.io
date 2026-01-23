@@ -157,48 +157,43 @@ botón[al hacer clic="abrirFormulario()"]:hover {
 .botón-formulario:hover {
   background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
 }
-/* Estilos para el logo del colegio - TAMAÑO PEQUEÑO Y AL LADO DEL TÍTULO */
+/* Estilos para el logo del colegio - FINAL Y DEFINITIVO */
 .contenedor-titulo-logo {
-  display: flex; /* Coloca logo y texto en fila */
-  align-items: center; /* Alineación vertical perfecta */
-  gap: 20px; /* Espacio moderado entre logo y título */
-  padding: 10px 20px; /* Margen lateral y vertical */
-  justify-content: center; /* CENTRA TODO EL CONTENEDOR */
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra TODO el grupo */
+  gap: 15px; /* Espacio ENTRE logo y título */
+  padding: 10px 20px;
 }
 
 .logo-colegio {
-  width: 60px; /* Tamaño pequeño y proporcional */
-  height: 60px; /* Mismo ancho y alto para mantenerlo redondo */
-  object-fit: contain; /* Evita deformaciones */
-  background-color: white; /* Fondo blanco para que no se mezcle con la barra azul */
-  border-radius: 50%; /* Asegura forma redonda perfecta */
-  padding: 3px; /* Pequeño borde blanco alrededor */
-  position: absolute; /* Coloca el logo a la izquierda */
-  left: 20px; /* Espacio desde el borde izquierdo */
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 50%;
+  padding: 3px;
 }
 
-/* Ajuste para pantallas pequeñas (celulares) */
+/* Ajuste para celulares */
 @media (max-width: 600px) {
   .logo-colegio {
-    width: 45px; /* Más pequeño en celulares */
+    width: 45px;
     height: 45px;
-    left: 10px;
   }
   .contenedor-titulo-logo {
-    padding: 10px;
+    gap: 10px;
   }
 }
 
-/* Estilos para el título y subtítulo */
+/* Título y subtítulo */
 .texto-titulo {
   display: flex;
   flex-direction: column;
-  gap: 5px; /* Espacio entre título y subtítulo */
-  text-align: center; /* CENTRA EL TEXTO */
-  width: 100%; /* Asegura que ocupe todo el espacio para centrar bien */
+  gap: 5px;
+  text-align: center;
 }
 
 h1, .subtitulo {
-  margin: 0; /* Quita márgenes sobrantes */
+  margin: 0;
 }
