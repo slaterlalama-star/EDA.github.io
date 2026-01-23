@@ -163,7 +163,8 @@ botón[al hacer clic="abrirFormulario()"]:hover {
   align-items: center; /* Alineación vertical perfecta */
   gap: 20px; /* Espacio moderado entre logo y título */
   padding: 10px 20px; /* Margen lateral y vertical */
-  justify-content: flex-start; /* Todo al inicio del contenedor */
+  justify-content: center; /* CENTRA TODO EL CONTENEDOR */
+  position: relative;
 }
 
 .logo-colegio {
@@ -173,6 +174,8 @@ botón[al hacer clic="abrirFormulario()"]:hover {
   background-color: white; /* Fondo blanco para que no se mezcle con la barra azul */
   border-radius: 50%; /* Asegura forma redonda perfecta */
   padding: 3px; /* Pequeño borde blanco alrededor */
+  position: absolute; /* Coloca el logo a la izquierda */
+  left: 20px; /* Espacio desde el borde izquierdo */
 }
 
 /* Ajuste para pantallas pequeñas (celulares) */
@@ -180,9 +183,9 @@ botón[al hacer clic="abrirFormulario()"]:hover {
   .logo-colegio {
     width: 45px; /* Más pequeño en celulares */
     height: 45px;
+    left: 10px;
   }
   .contenedor-titulo-logo {
-    gap: 15px; /* Menos espacio en pantallas chicas */
     padding: 10px;
   }
 }
@@ -192,9 +195,10 @@ botón[al hacer clic="abrirFormulario()"]:hover {
   display: flex;
   flex-direction: column;
   gap: 5px; /* Espacio entre título y subtítulo */
+  text-align: center; /* CENTRA EL TEXTO */
+  width: 100%; /* Asegura que ocupe todo el espacio para centrar bien */
 }
 
 h1, .subtitulo {
   margin: 0; /* Quita márgenes sobrantes */
-  text-align: left; /* Alinea el texto a la izquierda */
 }
