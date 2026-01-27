@@ -165,48 +165,33 @@ function irASección(idSección) {
 </section>
 
   <h2>Perspectivas sobre TCA</h2>
-  <p>A continuación, se explican aspectos clave sobre los Trastornos de Conducta Alimentaria:</p>
-  <section id="videos-testimoniales">
+  <section id="seccion-videos-tca">
+  <h2>Perspectivas sobre Trastornos de Conducta Alimentaria</h2>
+  <p>A continuación, se explican aspectos clave sobre los Trastornos de Conducta Alimentaria</p>
 
-    <!-- Video 1: Cómo afrontar un trastorno alimentario en la adolescencia -->
-    <p><button onclick="abrirVideo('https://www.youtube.com/watch?v=gnPfDsJUhYg')">📹 Ver video: Cómo afrontar un trastorno alimentario en la adolescencia</button></p>
-    <br><br>
+  <!-- Video 1: Cómo afrontar un Trastorno Alimentario en la Adolescencia -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/IDtnqVFLKXE" title="Cómo afrontar un Trastorno Alimentario en la Adolescencia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br><br>
 
-    <!-- Video 2: Trastornos alimentarios en adolescentes -->
-    <p><button onclick="abrirVideo('https://www.youtube.com/watch?v=foyO3cfnxMk')">📹 Ver video: Trastornos alimentarios en adolescentes</button></p>
-    <br><br>
+  <!-- Video 2: Trastornos alimentarios en adolescentes -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mBbQ0syCP-E" title="Trastornos alimentarios en adolescentes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br><br>
 
-    <!-- Video 3: ¿Qué son anorexia y bulimia? -->
-    <p><button onclick="abrirVideo('https://www.youtube.com/watch?si=L5HeFKr0Em77j2d-&v=rZg6lB5F-T0&feature=youtu.be')">📹 Ver video: ¿Qué son anorexia y bulimia?</button></p>
+  <!-- Video 3: ¿Qué son la anorexia y la bulimia? -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/kF7O6VNZah4" title="¿Qué son la anorexia y la bulimia?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <!-- Modal para ver videos dentro de la página -->
-    <div id="modalVideo" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:100;">
-      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:80%; max-width:800px;">
-        <p style="color:white; text-align:right; font-size:20px; cursor:pointer; margin:0;" onclick="cerrarVideo()">❌ Cerrar</p>
-        <iframe width="100%" height="450" src="" id="iframeModal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <script>
-    function abrirVideo(url) {
-      // Convertir link de visualización a link de incrustación
-      let linkEmbed = url;
-      if (linkEmbed.includes("watch?v=")) {
-        linkEmbed = linkEmbed.replace("watch?v=", "embed/").split("&")[0];
-      } else if (linkEmbed.includes("watch?si=")) {
-        linkEmbed = linkEmbed.replace("watch?si=", "embed/").split("&")[0];
-      }
-      document.getElementById('iframeModal').src = linkEmbed;
-      document.getElementById('modalVideo').style.display = "block";
-    }
-
-    function cerrarVideo() {
-      document.getElementById('modalVideo').style.display = "none";
-      document.getElementById('iframeModal').src = "";
-    }
-    </script>
-  </section>
 </section>
+
+<footer>
+  <p>© 2026 | E.D.A. Espacio de Diálogo Alimentaria</p>
+</footer>
+
+<script>
+  // Función para ir a cada sección al hacer clic
+  function irASeccion(idSeccion) {
+    document.getElementById(idSeccion).scrollIntoView({behavior: 'smooth'});
+  }
+</script>
 
 <footer>
   <p>© 2026 | E.D.A. Espacio de Diálogo Alimentaria</p>
