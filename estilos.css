@@ -123,8 +123,13 @@ section#ayuda a:hover {
     font-size: 14px; /* Tamaño de texto más pequeño */
 }
 iframe {
-  max-width: 100%;
-  height: auto;
+  display: block; /* Necesario para que el margin auto funcione */
+  max-width: 800px; /* Ajusta el tamaño máximo que quieras para los videos */
+  width: 100%; /* Se adapta a pantallas más pequeñas */
+  height: 450px; /* Mantiene la proporción correcta */
+  margin: 1.5rem auto; /* ¡Esto los centra horizontalmente! */
+  border-radius: 8px; /* Opcional: para que coincidan con las imágenes */
+}
 }
 /* Estilo para el botón del formulario de bienestar */
 botón[al hacer clic="abrirFormulario()"] {
