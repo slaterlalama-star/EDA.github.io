@@ -295,3 +295,122 @@ h1 {
 .juego-contenedor button:hover {
   background-color: #FFD54F;
 }
+/* =============================================
+   ESTILOS PARA JUEGOS
+   ============================================= */
+#seccion-juegos {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+#seccion-juegos h2 {
+  color: #2E7D32;
+  margin-bottom: 2rem;
+}
+
+/* Estilos Juego de Memoria */
+.juego-memoria {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.juego-memoria h3 {
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.tablero-memoria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.tarjeta-memoria {
+  background-color: #FFCC80;
+  height: 80px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tarjeta-memoria.girada {
+  background-color: #81D4FA;
+  transform: rotateY(180deg);
+}
+
+.tarjeta-memoria.encontrada {
+  background-color: #66BB6A;
+  color: #FFFFFF;
+  cursor: default;
+}
+
+.puntaje-memoria {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Estilos Cuestionario */
+.juego-cuestionario {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.juego-cuestionario h3 {
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.pregunta-cuestionario {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.pregunta-cuestionario h4 {
+  color: #333333;
+  margin-bottom: 0.8rem;
+}
+
+.opciones-cuestionario {
+  margin-left: 1rem;
+}
+
+.opciones-cuestionario input {
+  margin-right: 0.5rem;
+}
+
+.resultado-cuestionario {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+/* Botones */
+.juego-memoria button,
+.juego-cuestionario button {
+  background-color: #FFB74D;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.juego-memoria button:hover,
+.juego-cuestionario button:hover {
+  background-color: #FF9800;
+}
