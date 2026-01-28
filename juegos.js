@@ -12,11 +12,20 @@ const terminosMemoria = [
   "Adolescencia", "Etapa de riesgo"
 ];
 
-let tarjetas = [];
 let tarjeta1 = null;
 let tarjeta2 = null;
 let bloqueo = false;
 let puntajeMemoria = 0;
+
+// Función para mezclar elementos SIN eval()
+function mezclarArray(array) {
+  let nuevoArray = [...array];
+  for (let i = nuevoArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [nuevoArray[i], nuevoArray[j]] = [nuevoArray[j], nuevoArray[i]];
+  }
+  return nuevoArray;
+}
 
 // Función para iniciar el juego de memoria
 function iniciarMemoria() {
@@ -26,7 +35,8 @@ function iniciarMemoria() {
   document.querySelector(".puntaje-memoria span").textContent = puntajeMemoria;
 
   // Mezclar términos y duplicarlos para formar pares
-  const terminosMezclados = [...terminosMemoria, ...terminosMemoria].sort(() => Math.random() - 0.5);
+  const terminosDuplicados = [...terminosMemoria, ...terminosMemoria];
+  const terminosMezclados = mezclarArray(terminosDuplicados);
 
   // Crear tarjetas
   terminosMezclados.forEach(termino => {
@@ -78,7 +88,7 @@ function mantenerTarjetas() {
 
 // Función si no son pareja
 function volverTarjetas() {
-  setTimeout(() => {
+  setTimeout(function() {
     tarjeta1.classList.remove("girada");
     tarjeta2.classList.remove("girada");
     tarjeta1.textContent = "?";
@@ -123,7 +133,7 @@ function generarCuestionario() {
   const contenedorPreguntas = document.querySelector(".cuestionario-contenedor");
   contenedorPreguntas.innerHTML = "";
 
-  preguntasCuestionario.forEach((pregunta, indice) => {
+  preguntasCuestionario.forEach(function(pregunta, indice) {
     const divPregunta = document.createElement("div");
     divPregunta.classList.add("pregunta-cuestionario");
     
@@ -132,7 +142,7 @@ function generarCuestionario() {
     const divOpciones = document.createElement("div");
     divOpciones.classList.add("opciones-cuestionario");
     
-    pregunta.opciones.forEach((opcion, i) => {
+    pregunta.opciones.forEach(function(opcion, i) {
       const input = document.createElement("input");
       input.type = "radio";
       input.name = pregunta-${indice};
@@ -143,7 +153,9 @@ function generarCuestionario() {
       label.htmlFor = opcion-${indice}-${i};
       label.textContent = opcion;
       
-      input.addEventListener("change", () => verificarRespuesta(indice, i));
+      input.addEventListener("change", function() {
+        verificarRespuesta(indice, i);
+      });
       
       divOpciones.appendChild(input);
       divOpciones.appendChild(label);
@@ -167,14 +179,16 @@ function verificarRespuesta(indicePregunta, indiceRespuesta) {
 function reiniciarCuestionario() {
   puntajeCuestionario = 0;
   document.querySelector(".resultado-cuestionario span").textContent = 0;
-  document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
+  document.querySelectorAll('input[type="radio"]').forEach(function(input) {
+    input.checked = false;
+  });
 }
 
 
 // =============================================
 // CARGAR TODO CUANDO LA PÁGINA ESTÉ LISTA
 // =============================================
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
   // Agregar botón de inicio al juego de memoria
   const btnIniciar = document.createElement("button");
   btnIniciar.textContent = "Iniciar Juego de Memoria";
