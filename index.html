@@ -224,34 +224,10 @@ function irASección(idSección) {
   <!-- Video 3: ¿Qué son la anorexia y la bulimia? -->
   <iframe width="560" height="315" src="https://www.youtube.com/embed/kF7O6VNZah4" title="¿Qué son la anorexia y la bulimia?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-</section>
-<!-- SECCIÓN DE JUEGOS -->
-<section id="juegos">
-  <h2>Juegos para Aprender</h2>
-
-  <!-- JUEGO DE MEMORIA -->
-  <div class="juego-contenedor">
-    <h3>Juego de Memoria: Términos sobre TCA</h3>
-    <p>Encuentra los pares de términos relacionados con los trastornos de conducta alimentaria:</p>
-    <div class="tablero-memoria"></div>
-    <p class="puntaje-memoria">Puntaje: <span>0</span></p>
-  </div>
-
-  <!-- CUESTIONARIO INTERACTIVO -->
-  <div class="juego-contenedor">
-    <h3>Cuestionario: ¿Qué sabes sobre los TCA?</h3>
-    <p>Responde las preguntas y descubre cuánto conoces:</p>
-    <div class="cuestionario-contenedor"></div>
-    <p class="resultado-cuestionario">Tu puntaje: <span>0</span>/3</p>
-  </div>
-</section>
-
 <!-- PIE DE PÁGINA -->
 <footer>
   <p>© 2026 | E.D.A. Espacio de Diálogo Alimentario - Colegio Dolores</p>
 </footer>
-<script>let tarjeta1=null;let tarjeta2=null;let bloqueoMemoria=!1;let puntajeMemoria=0;const terminosMemoria=["Anorexia","Pérdida de peso","Bulimia","Atracón-purgación","Binge Eating","Comer en exceso","RATCA","Red de ayuda","Autoestima","Relacionada con TCA","Nutrición","Alimentación saludable","Psicólogo","Profesional de ayuda","Adolescencia","Etapa de riesgo"];function inicializarMemoria(){const e=document.querySelector(".tablero-memoria"),t=document.querySelector(".puntaje-memoria span");t.textContent=puntajeMemoria;const a=[...terminosMemoria,...terminosMemoria];a.sort(()=>Math.random()-.5),e.innerHTML="",a.forEach(t=>{const a=document.createElement("div");a.classList.add("tarjeta-memoria"),a.dataset.termino=t,a.textContent="?",a.addEventListener("click",girarTarjeta),e.appendChild(a)})}function girarTarjeta(){const e=this;if(bloqueoMemoria||e===tarjeta1||e.classList.contains("encontrada"))return;e.classList.add("girada"),e.textContent=e.dataset.termino,tarjeta1?((tarjeta2=e),bloqueoMemoria=!0,verificarPareja()):tarjeta1=e}function verificarPareja(){const e=document.querySelector(".puntaje-memoria span");tarjeta1.dataset.termino===tarjeta2.dataset.termino?(tarjeta1.classList.add("encontrada"),tarjeta2.classList.add("encontrada"),puntajeMemoria+=10,e.textContent=puntajeMemoria,reiniciarTurnoMemoria()):setTimeout(()=>{tarjeta1.classList.remove("girada"),tarjeta2.classList.remove("girada"),tarjeta1.textContent="?",tarjeta2.textContent="?",reiniciarTurnoMemoria()},1e3)}function reiniciarTurnoMemoria(){tarjeta1=null,tarjeta2=null,bloqueoMemoria=!1}let puntajeCuestionario=0;const preguntasCuestionario=[{texto:"¿Qué significa TCA?",opciones:["Trastornos de Conducta Alimentaria","Trastornos de Crecimiento y Alimentación","Trastornos Cardíacos Asociados"],correcta:0},{texto:"¿Cuál es un síntoma común de la anorexia nerviosa?",opciones:["Aumento de peso repentino","Refugio en la comida como mecanismo de afrontamiento","Pérdida de peso extrema"],correcta:2},{texto:"¿Qué es importante para el tratamiento de los TCA?",opciones:["Ignorar los síntomas","Ayuda profesional multidisciplinaria","Restringir completamente ciertos alimentos"],correcta:1}];function inicializarCuestionario(){const e=document.querySelector(".cuestionario-contenedor"),t=document.querySelector(".resultado-cuestionario span");t.textContent=puntajeCuestionario,e.innerHTML="",preguntasCuestionario.forEach((t,a)=>{const s=document.createElement("div");s.classList.add("pregunta-cuestionario"),s.innerHTML=<h4>${a+1}. ${t.texto}</h4>,t.opciones.forEach((t,s)=>{const i=document.createElement("button");i.classList.add("opcion-cuestionario"),i.textContent=t,i.addEventListener("click",()=>responderPregunta(a,s)),s.appendChild(i)}),e.appendChild(s)});const t=document.createElement("button");t.classList.add("reiniciar-cuestionario"),t.textContent="Reiniciar Cuestionario",t.addEventListener("click",reiniciarCuestionario),e.appendChild(t)}function responderPregunta(e,t){const a=document.querySelectorAll(.pregunta-cuestionario:nth-child(${e+1}) .opcion-cuestionario);a.forEach(e=>e.disabled=!0),t===preguntasCuestionario[e].correcta?(a[t].style.backgroundColor="#66BB6A",puntajeCuestionario++):(a[t].style.backgroundColor="#EF5350",a[preguntasCuestionario[e].correcta].style.backgroundColor="#66BB6A"),document.querySelector(".resultado-cuestionario span").textContent=puntajeCuestionario}function reiniciarCuestionario(){puntajeCuestionario=0,inicializarCuestionario()}document.addEventListener("DOMContentLoaded",()=>{inicializarMemoria(),inicializarCuestionario()});function irASeccion(e){document.getElementById(e).scrollIntoView({behavior:"smooth"})}</script>
-
-
+      
 </body>
 </html>
