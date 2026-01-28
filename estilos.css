@@ -124,7 +124,7 @@ section#ayuda a:hover {
     font-size: 14px; /* Tamaño de texto más pequeño */
 }
 iframe {
-  display: block;!important;
+  display: block !important;
   max-width: 700px !important; /* Un poco más pequeño que 800px */
   width: 100%;
   height: 400px !important; /* Un poco más bajo que 450px */
@@ -163,34 +163,6 @@ botón[al hacer clic="abrirFormulario()"]:hover {
 .botón-formulario:hover {
   background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
 }
-/* Estilos para el logo del colegio - TAMAÑO DE TUS DEDOS 😎 */
-.contenedor-titulo-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  gap: 20px; /* Espacio ajustado para el logo más grande */
-  padding: 10px 20px;
-}
-
-.logo-colegio {
-  width: 120px; /* Tamaño como tu mano lo marca */
-  height: 120px; 
-  object-fit: contain;
-  background-color: white;
-  border-radius: 50%;
-  padding: 4px; /* Un poquito más de borde para resaltarlo */
-}
-
-/* Ajuste para celulares (igual se ve bien) */
-@media (max-width: 600px) {
-  .logo-colegio {
-    width: 90px; /* Aún grande pero no tapa nada */
-    height: 90px;
-  }
-  .contenedor-titulo-logo {
-    gap: 15px;
-  }
-}
 
 /* Título y subtítulo - ajustados para la proporción */
 .texto-titulo {
@@ -207,136 +179,4 @@ h1, .subtitulo {
 /* Si el título se ve muy chico en comparación, puedes agrandarlo un poco */
 h1 {
   font-size: 2.5rem; /* Ajusta según necesites - solo si lo necesitas */
-}
-/* ESTILOS GENERALES */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #F5F5F5;
-}
-
-/* ESTILOS JUEGOS */
-#juegos {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.juego-contenedor {
-  background-color: #FFFFFF;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
-}
-
-/* JUEGO DE MEMORIA */
-.tablero-memoria {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin: 1.5rem 0;
-}
-
-.tarjeta-memoria {
-  background-color: #FFE082;
-  width: 100%;
-  height: 100px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.tarjeta-memoria.girada {
-  background-color: #B2E6D4;
-}
-
-.tarjeta-memoria.encontrada {
-  background-color: #66BB6A;
-  cursor: default;
-}
-
-/* CUESTIONARIO */
-.cuestionario-contenedor {
-  margin: 1.5rem 0;
-}
-
-.pregunta-cuestionario {
-  margin-bottom: 1.5rem;
-}
-
-.opcion-cuestionario {
-  display: block;
-  width: 100%;
-  padding: 0.8rem;
-  margin: 0.5rem 0;
-  border: none;
-  border-radius: 4px;
-  background-color: #E0E0E0;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.reiniciar-cuestionario {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #FFE082;
-  font-weight: bold;
-  cursor: pointer;
-}
-#videos {
-  width: 100%;
-  text-align: center; /* Centra el título y cualquier cosa más */
-  padding: 1rem 0;
-}
-/* CENTRAR VIDEOS FORZADO */
-#seccion-videos-tca iframe {
-  display: block !important;
-  margin: 2rem auto !important;
-  max-width: 800px !important;
-  width: 100% !important;
-  height: 450px !important;
-}
-/* CENTRAR VIDEOS FORZADO */
-#seccion-videos-tca iframe {
-  display: block !important;
-  margin: 2rem auto !important;
-  max-width: 800px !important;
-  width: 100% !important;
-  height: 450px !important;
-}
-/* -------------------------- */
-/* VIDEOS: CENTRADOS Y TAMAÑO FIJO */
-/* -------------------------- */
-iframe {
-  display: block !important;
-  margin: 2rem auto !important; /* ESPACIO ARRIBA/ABAJO Y CENTRADO */
-  max-width: 700px !important; /* TAMAÑO QUE YA TE GUSTA */
-  width: 100% !important;
-  height: 400px !important; /* TAMAÑO QUE YA TE GUSTA */
-  border: none !important;
-}
-
-/* -------------------------- */
-/* IMÁGENES: MÁS PEQUEÑAS Y CENTRADAS */
-/* -------------------------- */
-img {
-  display: block !important;
-  margin: 1.5rem auto !important; /* CENTRADO */
-  max-width: 500px !important; /* REDUCE EL TAMAÑO MÁXIMO */
-  max-height: 350px !important; /* MÁS PEQUEÑAS DE ALTURA */
-  width: 100% !important;
-  height: auto !important; /* MANTIENE PROPORCIÓN */
-}
-
-/* SI TIENES CONTENEDORES DE IMÁGENES */
-.imagen-contenedor {
-  max-width: 500px !important;
-  margin: 0 auto !important;
 }
