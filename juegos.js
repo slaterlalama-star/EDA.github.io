@@ -59,12 +59,19 @@ function girarTarjeta() {
   }
 
   tarjeta.classList.add("girada");
- function girarTarjeta() {
-  const tarjeta = this;
+  
+  // Ahora mostramos directamente el texto que está en el dataset SIN COMPARAR
+  tarjeta.textContent = tarjeta.dataset.termino;
 
-  if (bloqueo || tarjeta === tarjeta1 || tarjeta.classList.contains("encontrada")) {
+  if (!tarjeta1) {
+    tarjeta1 = tarjeta;
     return;
   }
+
+  tarjeta2 = tarjeta;
+  bloqueo = true;
+  verificarPareja();
+}
 
   tarjeta.classList.add("girada");
 
