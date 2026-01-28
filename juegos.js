@@ -2,14 +2,14 @@
 // JUEGO DE MEMORIA: TÉRMINOS SOBRE TCA
 // =============================================
 const terminosMemoria = [
-  "aixerona", "sopes de adidréP",
-  "aimilub", "noitagrup-ñorcAt",
-  "gnitaE egniB", "oscexe ne remoC",
-  "ACTA R", "aduya de deR",
-  "aimetsuotA", "ACT nos edanocileR",
-  "noicirtuN", "elbadlaus nóitnemilA",
-  "ógolociPs", "aduya fo lanoissoferP",
-  "ecnecselodA", "ogeirs ed apatE"
+  "Anorexia", "Pérdida de peso",
+  "Bulimia", "Atracón-purgación",
+  "Binge Eating", "Comer en exceso",
+  "RATCA", "Red de ayuda",
+  "Autoestima", "Relacionada con TCA",
+  "Nutrición", "Alimentación saludable",
+  "Psicólogo", "Profesional de ayuda",
+  "Adolescencia", "Etapa de riesgo"
 ];
 
 let tarjeta1 = null;
@@ -59,7 +59,44 @@ function girarTarjeta() {
   }
 
   tarjeta.classList.add("girada");
-  tarjeta.textContent = tarjeta.dataset.termino;
+ function girarTarjeta() {
+  const tarjeta = this;
+
+  if (bloqueo || tarjeta === tarjeta1 || tarjeta.classList.contains("encontrada")) {
+    return;
+  }
+
+  tarjeta.classList.add("girada");
+
+  let textoCorrecto = "";
+  if(tarjeta.dataset.termino === "Anorexia") textoCorrecto = "Anorexia";
+  else if(tarjeta.dataset.termino === "Pérdida de peso") textoCorrecto = "Pérdida de peso";
+  else if(tarjeta.dataset.termino === "Bulimia") textoCorrecto = "Bulimia";
+  else if(tarjeta.dataset.termino === "Atracón-purgación") textoCorrecto = "Atracón-purgación";
+  else if(tarjeta.dataset.termino === "Binge Eating") textoCorrecto = "Binge Eating";
+  else if(tarjeta.dataset.termino === "Comer en exceso") textoCorrecto = "Comer en exceso";
+  else if(tarjeta.dataset.termino === "RATCA") textoCorrecto = "RATCA";
+  else if(tarjeta.dataset.termino === "Red de ayuda") textoCorrecto = "Red de ayuda";
+  else if(tarjeta.dataset.termino === "Autoestima") textoCorrecto = "Autoestima";
+  else if(tarjeta.dataset.termino === "Relacionada con TCA") textoCorrecto = "Relacionada con TCA";
+  else if(tarjeta.dataset.termino === "Nutrición") textoCorrecto = "Nutrición";
+  else if(tarjeta.dataset.termino === "Alimentación saludable") textoCorrecto = "Alimentación saludable";
+  else if(tarjeta.dataset.termino === "Psicólogo") textoCorrecto = "Psicólogo";
+  else if(tarjeta.dataset.termino === "Profesional de ayuda") textoCorrecto = "Profesional de ayuda";
+  else if(tarjeta.dataset.termino === "Adolescencia") textoCorrecto = "Adolescencia";
+  else if(tarjeta.dataset.termino === "Etapa de riesgo") textoCorrecto = "Etapa de riesgo";
+
+  tarjeta.textContent = textoCorrecto;
+
+  if (!tarjeta1) {
+    tarjeta1 = tarjeta;
+    return;
+  }
+
+  tarjeta2 = tarjeta;
+  bloqueo = true;
+  verificarPareja();
+}
   if (!tarjeta1) {
     tarjeta1 = tarjeta;
     return;
