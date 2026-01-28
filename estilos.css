@@ -239,3 +239,9 @@ body, p, h2, h3, ul, li {
   text-align: center !important;
   font-size: 1rem !important; /* Ajusta tamaño si necesitas */
 }
+/* AGRANDAR SOLO LA IMAGEN DE "¿QUÉ ES UN TRASTORNO ALIMENTARIO?" */
+.imagen-grande-tca {
+  max-width: 650px !important; /* Más grande que las otras (antes eran 450px) */
+  width: 100% !important; /* Se adapta a pantallas chicas */
+  height: auto !important; /* No se deforma */
+}
