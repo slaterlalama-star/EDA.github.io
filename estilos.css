@@ -208,24 +208,6 @@ h1, .subtitulo {
 h1 {
   font-size: 2.5rem; /* Ajusta según necesites - solo si lo necesitas */
 }
-/* ESTILOS PARA JUEGOS */
-#juegos {
-  text-align: center;
-}
-
-.juego-contenedor {
-  background-color: #FFF;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
-}
-
-.juego-contenedor h3 {
-  color: #81C784;
-  margin-bottom: 1rem;
-}
-
 /* ESTILOS JUEGO DE MEMORIA */
 .tablero-memoria {
   display: grid;
@@ -245,23 +227,16 @@ h1 {
   align-items: center;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
-  transform: rotateY(0);
+  transition: background-color 0.3s;
 }
 
 .tarjeta-memoria.girada {
   background-color: #B2E6D4;
-  transform: rotateY(180deg);
 }
 
 .tarjeta-memoria.encontrada {
   background-color: #66BB6A;
   cursor: default;
-}
-
-.puntaje-memoria {
-  margin-top: 1rem;
-  font-size: 1.2rem;
 }
 
 /* ESTILOS CUESTIONARIO */
