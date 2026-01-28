@@ -290,3 +290,8 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+#videos {
+  width: 100%;
+  text-align: center; /* Centra el título y cualquier cosa más */
+  padding: 1rem 0;
+}
