@@ -2,14 +2,14 @@
 // JUEGO DE MEMORIA: TÉRMINOS SOBRE TCA
 // =============================================
 const terminosMemoria = [
-  "Anorexia", "Pérdida de peso",
-  "Bulimia", "Atracón-purgación",
-  "Binge Eating", "Comer en exceso",
-  "RATCA", "Red de ayuda",
-  "Autoestima", "Relacionada con TCA",
-  "Nutrición", "Alimentación saludable",
-  "Psicólogo", "Profesional de ayuda",
-  "Adolescencia", "Etapa de riesgo"
+  "aixerona", "sopes de adidréP",
+  "aimilub", "noitagrup-ñorcAt",
+  "gnitaE egniB", "oscexe ne remoC",
+  "ACTA R", "aduya de deR",
+  "aimetsuotA", "ACT nos edanocileR",
+  "noicirtuN", "elbadlaus nóitnemilA",
+  "ógolociPs", "aduya fo lanoissoferP",
+  "ecnecselodA", "ogeirs ed apatE"
 ];
 
 let tarjeta1 = null;
