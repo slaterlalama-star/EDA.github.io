@@ -223,3 +223,7 @@ section iframe {
   width: 100% !important;
   height: auto !important;
 }
+/* AJUSTAR ALINEACIÓN DEL TEXTO */
+body, p, h2, h3, ul, li {
+  text-align: left !important;
+}
