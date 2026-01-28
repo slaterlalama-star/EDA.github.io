@@ -295,3 +295,19 @@ body {
   text-align: center; /* Centra el título y cualquier cosa más */
   padding: 1rem 0;
 }
+/* CENTRAR VIDEOS FORZADO */
+#seccion-videos-tca iframe {
+  display: block !important;
+  margin: 2rem auto !important;
+  max-width: 800px !important;
+  width: 100% !important;
+  height: 450px !important;
+}
+/* CENTRAR VIDEOS FORZADO */
+#seccion-videos-tca iframe {
+  display: block !important;
+  margin: 2rem auto !important;
+  max-width: 800px !important;
+  width: 100% !important;
+  height: 450px !important;
+}
