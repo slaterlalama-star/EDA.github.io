@@ -228,12 +228,16 @@ h1 {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  direction: ltr; /* ← AGREGA ESTO */
+  unicode-bidi: bidi-override; /* ← Y ESTO */
 }
 
 .tarjeta-memoria.girada {
   background-color: #B2E6D4;
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  transform: scaleX(1);
 }
-
 .tarjeta-memoria.encontrada {
   background-color: #66BB6A;
   cursor: default;
