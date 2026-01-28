@@ -124,12 +124,12 @@ section#ayuda a:hover {
     font-size: 14px; /* Tamaño de texto más pequeño */
 }
 iframe {
-  display: block;
+  display: block;!important;
   max-width: 700px !important; /* Un poco más pequeño que 800px */
   width: 100%;
   height: 400px !important; /* Un poco más bajo que 450px */
   margin: 2rem auto !important; /* ¡FORZAMOS EL CENTRADO! */
-  border-radius: 8px;
+  border-radius: 8px !important;
 }
 }
 /* Estilo para el botón del formulario de bienestar */
