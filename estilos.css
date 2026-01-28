@@ -200,3 +200,26 @@ h1, .subtitulo {
 h1 {
   font-size: 2.5rem; /* Ajusta según necesites - solo si lo necesitas */
 }
+/* CLASE ESPECIAL PARA CENTRAR IMÁGENES */
+.imagen-centrada {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 450px !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+/* CENTRAR VIDEOS */
+section iframe {
+  display: block !important;
+  margin: 1.5rem auto !important;
+  max-width: 560px !important;
+  width: 100% !important;
+  height: auto !important;
+}
