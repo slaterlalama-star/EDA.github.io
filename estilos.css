@@ -74,14 +74,15 @@ section p {
     margin-bottom: 1.5rem;
 }
 
+/* IMÁGENES: CENTRADAS Y AJUSTADAS */
 section img {
-  display: block;
-  max-width: 450px !important; /* Más pequeñas, sin exagerar */
-  width: 100%;
-  height: auto;
-  margin: 1.5rem auto !important; /* Centrado total en la página */
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: block !important;
+  margin: 1.5rem auto !important;
+  max-width: 450px !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
 }
 /* PIE DE PÁGINA */
 footer {
