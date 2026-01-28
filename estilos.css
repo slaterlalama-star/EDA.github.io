@@ -7,17 +7,17 @@
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+  background-color: #FFF9E6; /* Amarillo muy suave, casi crema */
+  color: #4A4A4A; /* Gris medio para texto */
+  line-height: 1.6;
 }
 
 /* HEADER */
 header {
-    background-color: #0a3d62; /* Celeste oscuro */
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
+  background-color: #B2E6D4; /* Verde menta pastel */
+  color: #4A4A4A; /* Gris medio */
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
 header h1 {
