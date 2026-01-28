@@ -76,10 +76,10 @@ section p {
 
 section img {
   display: block;
-  max-width: 500px; /* Ajusta este número al tamaño que quieras (ej: 700px o 600px) */
+  max-width: 450px !important; /* Más pequeñas, sin exagerar */
   width: 100%;
   height: auto;
-  margin: 1.5rem auto; /* Esto la centra perfectamente */
+  margin: 1.5rem auto !important; /* Centrado total en la página */
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
