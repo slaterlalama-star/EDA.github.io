@@ -227,3 +227,15 @@ section iframe {
 body, p, h2, h3, ul, li {
   text-align: left !important;
 }
+/* AJUSTAR POSICIÓN DEL SUBTÍTULO EDA */
+.texto-titulo h1 {
+  margin-bottom: 0.2rem !important; /* Poco espacio entre título y subtítulo */
+  text-align: center !important;
+}
+
+.subtitulo {
+  margin-top: 0 !important; /* Quita espacio de arriba */
+  margin-bottom: 1rem !important; /* Espacio antes de la barra de navegación */
+  text-align: center !important;
+  font-size: 1rem !important; /* Ajusta tamaño si necesitas */
+}
