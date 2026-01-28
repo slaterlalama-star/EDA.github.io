@@ -32,27 +32,27 @@ header h1 {
 
 /* BARRA DE NAVEGACIÓN */
 .barra-navegacion {
-    background-color: #2c3e50; /* Gris oscuro */
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  background-color: #E6E6E6; /* Gris muy claro */
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .barra-navegacion button {
-    background-color: #3498db; /* Celeste claro */
-    color: white;
-    border: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+  background-color: #FFE082; /* Amarillo suave */
+  color: #4A4A4A;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
 .barra-navegacion button:hover {
-    background-color: #2980b9; /* Celeste más oscuro al pasar el mouse */
+  background-color: #FFD54F; /* Amarillo un poco más oscuro */
 }
 
 /* SECCIONES */
@@ -63,13 +63,12 @@ section {
 }
 
 section h2 {
-    color: #0a3d62; /* Celeste oscuro */
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.5rem;
+  color: #81C784; /* Verde menta más saturado */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #B2E6D4; /* Verde menta claro */
+  padding-bottom: 0.5rem;
 }
-
 section p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
@@ -84,11 +83,11 @@ section img {
 
 /* PIE DE PÁGINA */
 footer {
-    background-color: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 3rem;
+  background-color: #B2E6D4; /* Verde menta pastel */
+  color: #4A4A4A;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
 }
 /* ESTILOS PARA LISTAS */
 section ul {
@@ -109,13 +108,13 @@ section h3 {
 }
 /* Estilo para enlaces de ayuda */
 section#ayuda a {
-    color: #27ae60; /* Color verde para transmitir esperanza */
-    text-decoration: none; /* Quita el subrayado */
+  color: #66BB6A; /* Verde menta medio */
+  text-decoration: none;
 }
 
 section#ayuda a:hover {
-    text-decoration: underline; /* Pone subrayado al pasar el mouse */
-    color: #2ecc71; /* Verde más claro al hacer hover */
+  text-decoration: underline;
+  color: #4CAF50; /* Verde un poco más oscuro */
 }
 
 .pie-imagen {
