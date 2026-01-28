@@ -311,3 +311,32 @@ body {
   width: 100% !important;
   height: 450px !important;
 }
+/* -------------------------- */
+/* VIDEOS: CENTRADOS Y TAMAÑO FIJO */
+/* -------------------------- */
+iframe {
+  display: block !important;
+  margin: 2rem auto !important; /* ESPACIO ARRIBA/ABAJO Y CENTRADO */
+  max-width: 700px !important; /* TAMAÑO QUE YA TE GUSTA */
+  width: 100% !important;
+  height: 400px !important; /* TAMAÑO QUE YA TE GUSTA */
+  border: none !important;
+}
+
+/* -------------------------- */
+/* IMÁGENES: MÁS PEQUEÑAS Y CENTRADAS */
+/* -------------------------- */
+img {
+  display: block !important;
+  margin: 1.5rem auto !important; /* CENTRADO */
+  max-width: 500px !important; /* REDUCE EL TAMAÑO MÁXIMO */
+  max-height: 350px !important; /* MÁS PEQUEÑAS DE ALTURA */
+  width: 100% !important;
+  height: auto !important; /* MANTIENE PROPORCIÓN */
+}
+
+/* SI TIENES CONTENEDORES DE IMÁGENES */
+.imagen-contenedor {
+  max-width: 500px !important;
+  margin: 0 auto !important;
+}
