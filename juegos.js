@@ -59,7 +59,7 @@ function girarTarjeta() {
   }
 
   tarjeta.classList.add("girada");
-  tarjeta.textContent = tarjeta.dataset.termino.split('').reverse().join('');
+  tarjeta.textContent = tarjeta.dataset.termino;
   if (!tarjeta1) {
     tarjeta1 = tarjeta;
     return;
