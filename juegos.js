@@ -60,7 +60,9 @@ function girarTarjeta(e) {
 
 // Función para verificar si las tarjetas son pareja
 function verificarPareja() {
-  const esPareja = tarjeta1.dataset.termino !== tarjeta2.dataset.termino && terminosMemoria.indexOf(tarjeta1.dataset.termino) === terminosMemoria.indexOf(tarjeta2.dataset.termino) % 2 === 0 ? false : true;
+  const indice1 = terminosMemoria.indexOf(tarjeta1.dataset.termino);
+  const indice2 = terminosMemoria.indexOf(tarjeta2.dataset.termino);
+  const esPareja = (indice1 % 2 === 0 && indice2 === indice1 + 1) || (indice2 % 2 === 0 && indice1 === indice2 + 1);
   
   esPareja ? mantenerTarjetas() : volverTarjetas();
 }
@@ -118,7 +120,7 @@ let puntajeCuestionario = 0;
 
 // Función para generar el cuestionario
 function generarCuestionario() {
-  const contenedorPreguntas = document.querySelector("#preguntas-cuestionario");
+  const contenedorPreguntas = document.querySelector(".cuestionario-contenedor");
   contenedorPreguntas.innerHTML = "";
 
   preguntasCuestionario.forEach((pregunta, indice) => {
@@ -177,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnIniciar = document.createElement("button");
   btnIniciar.textContent = "Iniciar Juego de Memoria";
   btnIniciar.addEventListener("click", iniciarMemoria);
-  const contenedorMemoria = document.querySelector(".juego-memoria");
+  const contenedorMemoria = document.querySelector(".juego-contenedor:first-child");
   contenedorMemoria.insertBefore(btnIniciar, document.querySelector(".tablero-memoria"));
 
   // Generar el cuestionario automáticamente
