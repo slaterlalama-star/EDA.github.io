@@ -85,10 +85,23 @@ section img {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
 }
 
-/* CENTRAR LISTAS Y SU CONTENIDO */
+/* CENTRAR TODO LO RELACIONADO CON IMÁGENES Y LISTAS */
 section ul {
   list-style-position: inside;
-  text-align: center; /* Centra todo el contenido de la lista */
+  text-align: center;
+  padding-left: 0 !important; /* QUITA EL ESPACIO POR DEFECTO DE LA LISTA */
+}
+
+section ul li img,
+section img {
+  display: block !important;
+  margin: 1.5rem auto !important;
+  max-width: 450px !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  clear: both !important; /* QUITA CUALQUIER DESAJUSTE */
 }
 /* PIE DE PÁGINA */
 footer {
