@@ -1,12 +1,14 @@
-// JUEGO DE MEMORIA
+// =============================================
+// JUEGO DE MEMORIA: TÉRMINOS SOBRE TCA
+// =============================================
 const terminosMemoria = [
-  "Anorexia", "Pérdida peso",
+  "Anorexia", "Pérdida de peso",
   "Bulimia", "Atracón-purgación",
   "Binge Eating", "Comer en exceso",
   "RATCA", "Red de ayuda",
   "Autoestima", "Relacionada con TCA",
   "Nutrición", "Alimentación saludable",
-  "Psicólogo", "Profesional ayuda",
+  "Psicólogo", "Profesional de ayuda",
   "Adolescencia", "Etapa de riesgo"
 ];
 
@@ -16,26 +18,28 @@ let tarjeta2 = null;
 let bloqueo = false;
 let puntajeMemoria = 0;
 
+// Función para iniciar el juego de memoria
 function iniciarMemoria() {
   const tablero = document.querySelector(".tablero-memoria");
   tablero.innerHTML = "";
   puntajeMemoria = 0;
   document.querySelector(".puntaje-memoria span").textContent = puntajeMemoria;
 
-  // Mezclar términos
-  const terminosMezclados = [...terminosMemoria].sort(() => Math.random() - 0.5);
+  // Mezclar términos y duplicarlos para formar pares
+  const terminosMezclados = [...terminosMemoria, ...terminosMemoria].sort(() => Math.random() - 0.5);
 
+  // Crear tarjetas
   terminosMezclados.forEach(termino => {
     const tarjeta = document.createElement("div");
     tarjeta.classList.add("tarjeta-memoria");
     tarjeta.dataset.termino = termino;
-    tarjeta.textContent = "";
+    tarjeta.textContent = "?"; // Texto oculto
     tarjeta.addEventListener("click", girarTarjeta);
     tablero.appendChild(tarjeta);
-    tarjetas.push(tarjeta);
   });
 }
 
+// Función para girar tarjetas
 function girarTarjeta(e) {
   const tarjeta = e.target;
 
@@ -51,120 +55,131 @@ function girarTarjeta(e) {
 
   tarjeta2 = tarjeta;
   bloqueo = true;
+  verificarPareja();
+}
 
-  if (tarjeta1.dataset.termino !== tarjeta2.dataset.termino) {
-    setTimeout(() => {
-      tarjeta1.classList.remove("girada");
-      tarjeta2.classList.remove("girada");
-      tarjeta1.textContent = "";
-      tarjeta2.textContent = "";
-      tarjeta1 = null;
-      tarjeta2 = null;
-      bloqueo = false;
-    }, 1000);
-  } else {
-    setTimeout(() => {
-      tarjeta1.classList.add("encontrada");
-      tarjeta2.classList.add("encontrada");
-      tarjeta1 = null;
-      tarjeta2 = null;
-      bloqueo = false;
-      puntajeMemoria += 10;
-      document.querySelector(".puntaje-memoria span").textContent = puntajeMemoria;
-    }, 500);
-  }
+// Función para verificar si las tarjetas son pareja
+function verificarPareja() {
+  const esPareja = tarjeta1.dataset.termino !== tarjeta2.dataset.termino && terminosMemoria.indexOf(tarjeta1.dataset.termino) === terminosMemoria.indexOf(tarjeta2.dataset.termino) % 2 === 0 ? false : true;
+  
+  esPareja ? mantenerTarjetas() : volverTarjetas();
+}
+
+// Función si son pareja
+function mantenerTarjetas() {
+  tarjeta1.classList.add("encontrada");
+  tarjeta2.classList.add("encontrada");
+  puntajeMemoria++;
+  document.querySelector(".puntaje-memoria span").textContent = puntajeMemoria;
+  reiniciarTurno();
+}
+
+// Función si no son pareja
+function volverTarjetas() {
+  setTimeout(() => {
+    tarjeta1.classList.remove("girada");
+    tarjeta2.classList.remove("girada");
+    tarjeta1.textContent = "?";
+    tarjeta2.textContent = "?";
+    reiniciarTurno();
+  }, 1000);
+}
+
+// Función para reiniciar turno
+function reiniciarTurno() {
+  tarjeta1 = null;
+  tarjeta2 = null;
+  bloqueo = false;
 }
 
 
-// CUESTIONARIO INTERACTIVO
+// =============================================
+// CUESTIONARIO: ¿QUÉ SABES SOBRE LOS TCA?
+// =============================================
 const preguntasCuestionario = [
   {
-    pregunta: "¿Cuál es el número de línea de ayuda psicológica gratuita del Ministerio de Salud Pública?",
-    opciones: [
-      "1800-10-1010",
-      "1800-20-2020",
-      "1800-30-3030"
-    ],
-    respuestaCorrecta: 0
-  },
-  {
-    pregunta: "¿Qué significa RATCA?",
-    opciones: [
-      "Red de Atención a Trastornos de Conducta Alimentaria",
-      "Red de Atención a Trastornos Cardíacos",
-      "Red de Ayuda a Trastornos de Ansiedad"
-    ],
-    respuestaCorrecta: 0
-  },
-  {
-    pregunta: "¿Cuál de estas es una característica de la bulimia?",
-    opciones: [
-      "Pérdida extrema de peso sin comer",
-      "Episodios de atracón seguidos de purgas",
-      "Comer en exceso sin control pero sin purgas"
-    ],
+    pregunta: "¿Cuál es el trastorno caracterizado por restricción alimentaria y pérdida de peso extrema?",
+    opciones: ["Bulimia Nerviosa", "Anorexia Nerviosa", "Binge Eating Disorder", "RATCA"],
     respuestaCorrecta: 1
   },
   {
-    pregunta: "¿Qué aplicación móvil ofrece información sobre TCA en Ecuador?",
-    opciones: [
-      "Salud Adulto EC",
-      "Salud Adolescente EC",
-      "Salud Infantil EC"
-    ],
+    pregunta: "¿Qué significa la sigla RATCA?",
+    opciones: ["Red de Apoyo a Trastornos de Conducta Alimentaria", "Registro de Atención a Trastornos Crónicos", "Riesgo Alto de Trastornos Alimentarios", "Ninguna de las anteriores"],
+    respuestaCorrecta: 0
+  },
+  {
+    pregunta: "¿En qué etapa de la vida es más común el inicio de los TCA?",
+    opciones: ["Infancia", "Adolescencia", "Adultez mayor", "Niñez temprana"],
     respuestaCorrecta: 1
   }
 ];
 
 let puntajeCuestionario = 0;
 
-function iniciarCuestionario() {
-  const contenedor = document.querySelector(".cuestionario-contenedor");
-  contenedor.innerHTML = "";
-  puntajeCuestionario = 0;
-  document.querySelector(".resultado-cuestionario span:first-child").textContent = puntajeCuestionario;
-  document.querySelector(".resultado-cuestionario span:last-child").textContent = preguntasCuestionario.length;
+// Función para generar el cuestionario
+function generarCuestionario() {
+  const contenedorPreguntas = document.querySelector("#preguntas-cuestionario");
+  contenedorPreguntas.innerHTML = "";
 
   preguntasCuestionario.forEach((pregunta, indice) => {
     const divPregunta = document.createElement("div");
     divPregunta.classList.add("pregunta-cuestionario");
-    divPregunta.innerHTML = <p><strong>${indice + 1}. ${pregunta.pregunta}</strong></p>;
-
+    
+    divPregunta.innerHTML = <h4>${indice + 1}. ${pregunta.pregunta}</h4>;
+    
     const divOpciones = document.createElement("div");
     divOpciones.classList.add("opciones-cuestionario");
-
+    
     pregunta.opciones.forEach((opcion, i) => {
-  const input = document.createElement("input");
-  input.type = "radio";
-  input.name = pregunta-${indice};
-  input.value = i;
-  input.addEventListener("change", () => verificarRespuesta(indicePregunta, i));
-
-  const label = document.createElement("label");
-  label.textContent = opcion;
-  label.prepend(input);
-
-  divOpciones.appendChild(label);
-});
-
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = pregunta-${indice};
+      input.value = i;
+      input.id = opcion-${indice}-${i};
+      
+      const label = document.createElement("label");
+      label.htmlFor = opcion-${indice}-${i};
+      label.textContent = opcion;
+      
+      input.addEventListener("change", () => verificarRespuesta(indice, i));
+      
+      divOpciones.appendChild(input);
+      divOpciones.appendChild(label);
+      divOpciones.appendChild(document.createElement("br"));
+    });
+    
     divPregunta.appendChild(divOpciones);
-    contenedor.appendChild(divPregunta);
+    contenedorPreguntas.appendChild(divPregunta);
   });
 }
 
+// Función para verificar respuestas
 function verificarRespuesta(indicePregunta, indiceRespuesta) {
   if (indiceRespuesta === preguntasCuestionario[indicePregunta].respuestaCorrecta) {
     puntajeCuestionario++;
   }
-  document.querySelector(".resultado-cuestionario span:first-child").textContent = puntajeCuestionario;
+  document.querySelector(".resultado-cuestionario span").textContent = puntajeCuestionario;
 }
 
+// Función para reiniciar el cuestionario
 function reiniciarCuestionario() {
-  iniciarCuestionario();
+  puntajeCuestionario = 0;
+  document.querySelector(".resultado-cuestionario span").textContent = 0;
+  document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
 }
 
-// Iniciar juegos cuando cargue la página
-window.addEventListener("load", () => {
-  iniciarMemoria();
-  iniciarCuestionario();
+
+// =============================================
+// CARGAR TODO CUANDO LA PÁGINA ESTÉ LISTA
+// =============================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Agregar botón de inicio al juego de memoria
+  const btnIniciar = document.createElement("button");
+  btnIniciar.textContent = "Iniciar Juego de Memoria";
+  btnIniciar.addEventListener("click", iniciarMemoria);
+  const contenedorMemoria = document.querySelector(".juego-memoria");
+  contenedorMemoria.insertBefore(btnIniciar, document.querySelector(".tablero-memoria"));
+
+  // Generar el cuestionario automáticamente
+  generarCuestionario();
 });
