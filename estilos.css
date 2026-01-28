@@ -84,6 +84,12 @@ section img {
   border-radius: 8px !important;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
 }
+
+/* CENTRAR LISTAS Y SU CONTENIDO */
+section ul {
+  list-style-position: inside;
+  text-align: center; /* Centra todo el contenido de la lista */
+}
 /* PIE DE PÁGINA */
 footer {
   background-color: #B2E6D4; /* Verde menta pastel */
